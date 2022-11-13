@@ -6,6 +6,8 @@ import config from '../../config.json';
 
 import Menu from '../components/Menu';
 import { StyledTimeline } from '../components/Timeline';
+import { Banner } from '../components/Banner';
+import { Favoritos } from '../components/Favoritos';
 
 export default function HomePage() {
   const estiloDaHomePage = {
@@ -21,6 +23,7 @@ export default function HomePage() {
         <Menu />
         <Header />
         <Timeline playlists={config.playlists} />
+        <Favoritos favoritos={config.favoritos} />
       </div>
     </>
   );
@@ -44,7 +47,7 @@ const StyledHeader = styled.div`
 function Header() {
   return (
     <StyledHeader>
-      {/* <img src="banner" /> */}
+      <Banner src="https://images.unsplash.com/photo-1627398242454-45a1465c2479?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" />
 
       <section className='user-info'>
         <img src={`https://github.com/${config.github}.png`} />
